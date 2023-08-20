@@ -24,7 +24,6 @@ export const getTrack = async (req: Request, res: Response) => {
 };
 
 export const getTrackList = async (req: Request, res: Response) => {
-  console.log(req.body.url);
   const options = {
     method: "GET",
     url: req.body.url,
@@ -41,8 +40,6 @@ export const getTrackList = async (req: Request, res: Response) => {
 };
 
 export const getAlbum = async (req: Request, res: Response) => {
-  console.log(`${process.env.URL}/album/${req.params.id}`);
-
   const options = {
     method: "GET",
     url: `${process.env.URL}/album/${req.params.id}`,
